@@ -70,14 +70,14 @@ Cada módulo inclui pipelines de preparação de dados, treinamento de modelos e
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/SEU_USUARIO/finance-ai-project.git
-   cd finance-ai-project
+   git clone https://github.com/ggcds/finance_ai_project.git
+   cd finance_ai_project
    ```
 2. Crie e ative o ambiente:
    ```bash
    python -m venv .env
    source .env/bin/activate        # macOS/Linux
-   .env\Scriptsctivate         # Windows PowerShell
+   .env\Scripts\activate         # Windows PowerShell
    ```
 3. Instale dependências:
    ```bash
@@ -88,8 +88,19 @@ Cada módulo inclui pipelines de preparação de dados, treinamento de modelos e
 
 ## 🚀 Uso
 
-1. Inicie o servidor executando `unified_api.py`:
+Antes de iniciar o servidor, execute os notebooks em ordem para gerar os modelos (`*.pkl` e `*.h5`) na pasta `models/`:
+
+1. Abra o Jupyter na pasta de notebooks:
+   ```bash
+   jupyter notebook notebooks/
+   ```
+2. Execute os notebooks:
+   - `01_credit_risk_analysis.ipynb`
+   - `02_fraud_detection.ipynb`
+   - `03_investment_strategy.ipynb`
+
+3. Inicie o servidor FastAPI:
    ```bash
    uvicorn unified_api:app --reload
    ```
-2. Acesse `http://localhost:8000/docs` para explorar os endpoints de cada módulo.
+4. Acesse `http://localhost:8000/docs` para explorar os endpoints de cada módulo.
