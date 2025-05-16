@@ -1,0 +1,38 @@
+# Byte-compiled / caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Dados brutos
+/data/**
+!data/README.md       # se você quiser documentar o que tem em data (opcional)
+
+# Modelos e artefatos treinados
+/models/**
+!models/README.md     # idem, se tiver um README na pasta de modelos
+
+# Serializações de scalers, weights, etc.
+*.h5
+*.pkl
+*.joblib
+
+# Scripts de teste / saída
+*.log
+*.out
+
+# Ambiente virtual (se você usar um venv local)
+venv/
+env/
+ENV/
+
+# Arquivos de configuração sensíveis
+*.env
+*.ini
+*.cfg
+
+# IDEs e editores
+.vscode/
+.idea/
